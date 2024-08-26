@@ -19,6 +19,7 @@ body {
   height: 90px;
   padding: 30px 70px;
 }
+
 .gnav__list{
   display: flex;
   position: relative;
@@ -78,4 +79,44 @@ body {
   transform: translate(-50%, -50%);
   font-size: 24px;
   color: #fff;
+}
+
+.news__inner {
+  display: flex;
+  column-gap: 90px;
+}
+
+.news__body {
+  flex: 1;
+}
+
+.news-list__link {
+  display: flex;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.news-list__link:hover {
+  color: var(--main-color);
+}
+
+.news-list__item {
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.news-list__item:last-child {
+  margin-bottom: 0;
+}
+
+.news-list__title {
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.news-list__date {
+  margin-right: 20px;
 }
