@@ -5,10 +5,39 @@
   --text-color: #333;
 }
 
-/* 全体 */
+/* 
+全体
+*/
 body {
   font-family: "Roboto", "Noto Sans JP", Arial, "Hiragino Kaku Gothic ProN",
   "Hiragino Sans", Meiryo, sans-serif;
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+/* レイアウト */
+
+.wrapper {
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 30px;
+} 
+
+.content {
+  display: grid;
+  padding: 60px 0 100px;
+  row-gap: 80px;
 }
 
 /* ヘッダー */
@@ -26,6 +55,7 @@ body {
   align-items: center;
   justify-content: center;
   column-gap: 30px;
+  
 }
 
 .gnav__item {
@@ -33,7 +63,8 @@ body {
   line-height: 1;
   letter-spacing: 0.1em;
   margin-right: 80px;
-  list-style:none
+  list-style:none;
+  margin: 0 0 0 auto;
 }
 
 .gnav__link {
@@ -64,7 +95,7 @@ body {
 
 .center{
   position: absolute;
-  top: 20%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 160px;
@@ -74,11 +105,20 @@ body {
 
 .subcenter{
   position: absolute;
-  top: 60%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 24px;
   color: #fff;
+}
+
+/* 
+ニュース
+*/
+.heading-primary{
+  font-size: 40px;
+  color: #DD1B57;
+  font-weight: bold;
 }
 
 .news__inner {
@@ -119,4 +159,85 @@ body {
 
 .news-list__date {
   margin-right: 20px;
+}
+
+/* 
+サービス
+*/
+
+.service__heading {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.service__heading::before {
+  display: block;
+  content: "SERVICE";
+  position: absolute;
+  top: -40px;
+  right: -20px;
+  z-index: -1;
+  font-size: 168px;
+  font-weight: bold;
+  line-height: 1;
+  color: #f2f2f2;
+}
+
+.service-list {
+  display: grid;
+  column-gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.service-list__item {
+  padding: 50px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 3px 21px rgba(0, 0, 0, 0.16);
+}
+
+.service-list__img-wrapper {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.service-list__img {
+  font-size: 48px;
+  color: var(--main-color);
+  vertical-align: bottom;
+}
+
+.service-list__title {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.service-list__text {
+  font-size: 14px;
+  line-height: 1.7;
+  margin-top: 15px;
+}
+
+/* フッター */
+footer{
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 60px 20px 50px;
+}
+
+.footer-menu__list{
+  display: flex;
+  column-gap: 30px;
+}
+
+.footer-nav{
+  margin-bottom: 20px;
+}
+
+.footer-nav__link {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0.05em;
 }
