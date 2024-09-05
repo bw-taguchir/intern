@@ -51,6 +51,8 @@ a {
   width: 50%;
   height: auto;
   padding-bottom: 40px;
+  width: 750;
+  height: 759;
 }
 
 .container {
@@ -100,6 +102,8 @@ a {
 .block img{
   width: 100%;
   height: auto;
+  width: 700;
+  height: 357;
 }
 
 .blog-button{
@@ -166,3 +170,4 @@ footer{
     flex: 1 1 100%;
   }
 }
+
