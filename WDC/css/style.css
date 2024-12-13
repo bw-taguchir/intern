@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+:root {
+  --bg-color: #141414;
+  --bg-gradient: linear-gradient(
+    135deg,
+    #0e002e 0%,
+    #1e092b 23%,
+    #320c65 49%,
+    #a01b7c 80%,
+    #c21780 100%
+  );
+  --main-color: #d136d1;
+  --text-color: #fff;
+}
+
+
+body {
+  font-family: "Montserrat", "Noto Sans JP", Arial, "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", Meiryo, sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  font-feature-settings: "palt";
+}
