@@ -38,6 +38,48 @@ img {
 .sp {
   display: none;
 }
+
+/*--------------------------------
+ テーブル
+---------------------------------*/
+/* テーブルタイプ01 */
+.table-type01 {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.table-type01 th,
+.table-type01 td {
+  text-align: left;
+  padding: 5px 0;
+}
+
+/* テーブルタイプ02 */
+.table-type02 {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.table-type02 tr {
+  border-bottom: solid 1px #740174;
+}
+
+.table-type02 th,
+.table-type02 td {
+  padding: 40px 30px;
+}
+
+.table-type02 th {
+  width: 200px;
+}
+
+.table-type02 td > p {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
 /* 
 レイアウト
  */
@@ -55,6 +97,22 @@ img {
   text-align: center;
   margin-bottom: 60px;
 }
+
+/* ボタン */
+.btn{
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+  width: 300px;
+  font-size: 18px;
+  padding: 24px 0;;
+  background: linear-gradient(135deg, #c41a7f 0%, #664bbf 100%);
+  box-shadow: 0 5px 0 var(--main-color);
+  border-radius: 60px;
+  cursor: pointer;
+}
+
 
 /* 
 ヘッダー 
@@ -111,7 +169,7 @@ img {
   height: 700px;
   margin: 0 auto;
   padding: 0 50px;
-  background-image: url(img/mv.png);
+  background-image: url(../img/mv.png);
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: 560px 737px;
@@ -131,7 +189,7 @@ img {
   width: 326px;
   height: 68px;
   transform: rotate(-13deg);
-  background-image: url(img/teiji-de-kaerumon.svg);
+  background-image: url(../img/teiji-de-kaerumon.svg);
   background-size: contain;
 }
 
@@ -175,3 +233,94 @@ img {
 .mv__speaker-name-label {
   font-size: 14px;
 }
+
+/* ABOUT */
+.about__body{
+  display: flex;
+  align-items: center;
+  column-gap: 70px;
+}
+
+.about__img-wrapper{
+  flex: 0 1 40%;
+}
+
+.about__desc{
+  flex: 1;
+}
+
+.about__subtitle{
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.about__title{
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  color: var(--main-color);
+  margin-bottom: 40px;
+}
+
+.about__info{
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.about__btn{
+  margin-top: 20px;
+}
+
+
+/* SPEAKER */
+.speaker{
+  background: var(--bg-color);
+}
+
+.speaker-list{
+  display: grid;
+  row-gap: 80px;
+}
+
+.speaker-box{
+  display: flex;
+  column-gap: 60px;
+}
+
+.speaker-box:nth-child(2n){
+  flex-direction: row-reverse;
+}
+
+.speaker-box__desc{
+  flex: 1;
+}
+
+.speaker-box__img{
+  flex: 0 1 40%;
+}
+
+.speaker-box__name{
+  font-size: 42px;
+  font-weight: bold;
+  line-height: 1;
+  color: var(--main-color);
+  margin-bottom: 40px;
+}
+
+.speaker-box__name-note {
+  display: block;
+  font-size: 18px;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.speaker-box__text {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* 
+SESSION 
+*/
