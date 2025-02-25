@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  var pageTop = document.querySelector('.page-top');
+  let pageTop = document.querySelector('.page-top');
   window.addEventListener('scroll', function() {
     if (window.pageYOffset > 100) {
       pageTop.style.display = 'flex';
