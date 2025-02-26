@@ -1,23 +1,30 @@
-$(function () {
-  //ハンバーガーメニュー（SP）
-  $btnMenu = $("#js-btn-menu");
-  $gnav = $(".gnav");
+document.addEventListener("DOMContentLoaded", function () {
+  // ハンバーガーメニュー（SP）
+  var btnMenu = document.getElementById("js-btn-menu");
+  var gnav = document.querySelector(".gnav");
 
-  $btnMenu.on("click", function () {
-    $btnMenu.toggleClass("active");
-    $gnav.toggleClass("show");
-    $gnav.animate({ width: "toggle" }, 200);
+  btnMenu.addEventListener("click", function () {
+    btnMenu.classList.toggle("active");
+    gnav.classList.toggle("show");
+
+    if (gnav.style.display === "block") {
+      gnav.style.display = "none";
+    } else {
+      gnav.style.display = "block";
+    }
   });
 
-  $(document).on("click", function (e) {
-    if (
-      !$(e.target).closest($gnav).length &&
-      !$(e.target).closest($btnMenu).length
-    ) {
-      if ($gnav.hasClass("show")) {
-        $gnav.removeClass("show");
-        $btnMenu.toggleClass("active");
-        $gnav.animate({ width: "toggle" }, 200);
+  document.addEventListener("click", function (e) {
+    if (!gnav.contains(e.target) && !btnMenu.contains(e.target)) {
+      if (gnav.classList.contains("show")) {
+        gnav.classList.remove("show");
+        btnMenu.classList.toggle("active");
+
+        if (gnav.style.display === "block") {
+          gnav.style.display = "none";
+        } else {
+          gnav.style.display = "block";
+        }
       }
     }
   });
